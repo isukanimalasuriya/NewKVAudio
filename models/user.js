@@ -30,10 +30,6 @@ const userSchema = mongoose.Schema({
     phoneNo: {
         type : String,
         required : true,
-    },
-    whatsApp: {
-        type : String,
-        required : true,
     }
 })
 
