@@ -1,6 +1,7 @@
 import User from "../models/user.js";
 import brcypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 
 export function registerUser(req, res){
 
@@ -52,7 +53,7 @@ export function loginUser(req, res){
                         lastName: user.lastName,
                         email: user.email,
                         role: user.role
-                    }, "kvaudio1")
+                    }, process.env.JWT_SECRET)
                     res.json({message: "Login success", token:token})
                 }else{
                     res.status(401).json({error: "Login failed"})
