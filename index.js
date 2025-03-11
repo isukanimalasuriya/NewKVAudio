@@ -43,7 +43,7 @@ connection.once("open", ()=>{
 
 app.use("/api/users", userRouter)
 app.use("/api/products", productRouter)
-//app.use("/api/reviews", reviewRouter)
+app.use("/api/reviews", reviewRouter)
 
 app.listen(3000, ()=>{
     console.log("Server is running on port 3000")
